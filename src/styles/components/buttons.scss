@@ -1,0 +1,31 @@
+@use '../vars/colors.scss';
+
+@mixin _button($color) {
+    background-color: $color;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 16px;
+    border: 0px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($color, 5);
+    }
+
+    :active {
+        transform: scale(0.95);
+    }
+}
+
+@function lighten-10($color) {
+    @return lighten($color, 10); 
+}
+
+.primary-btn {
+    @include _button(colors.$primary);
+}
+
+

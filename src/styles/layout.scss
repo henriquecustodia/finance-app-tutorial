@@ -1,0 +1,32 @@
+@use 'vars/colors.scss';
+@use 'base/flexbox.scss';
+@use 'components/index.scss';
+
+html,
+body,
+#app {
+    margin: 0;
+    height: 100%;
+    background: colors.$bg-page;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: colors.$primary;
+}
+
+
